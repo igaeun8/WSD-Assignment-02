@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "WSD-Assignment-02": {
+    "Angular-demo": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/wsd-assignment-02",
+            "outputPath": "dist/WSD-Assignment-02",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -29,25 +29,20 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [],
-            "server": "src/main.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "server.ts"
-            }
+            "scripts": []
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
+                  "maximumWarning": "600kB",
                   "maximumError": "1MB"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kB",
-                  "maximumError": "4kB"
+                  "maximumWarning": "5kB",
+                  "maximumError": "6kB"
                 }
               ],
               "outputHashing": "all"
@@ -64,10 +59,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "WSD-Assignment-02:build:production"
+              "buildTarget": "Angular-demo:build:production"
             },
             "development": {
-              "buildTarget": "WSD-Assignment-02:build:development"
+              "buildTarget": "Angular-demo:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -97,5 +92,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "4c005ce0-b799-4613-aebc-dc4eb5b0fece"
   }
 }
